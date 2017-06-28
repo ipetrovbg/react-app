@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack:w" : "node C:\\Users\\ipetrovbg\\AppData\\Roaming\\npm\\node_modules\\webpack\\bin\\webpack.js --progress --colors --watch"
+    "webpack" : "node C:\\Users\\ipetrovbg\\AppData\\Roaming\\npm\\node_modules\\webpack\\bin\\webpack.js --progress --colors --watch"
   },
   "author": "",
   "license": "ISC",
