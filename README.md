@@ -17,5 +17,6 @@
   },
 ```
 ### 2. run npm install
-### 3. npm run webpack
-### 4. open index.html in browser
+### 3. create dist folder in root directory
+### 4. npm run webpack
+### 5. open index.html in browser
