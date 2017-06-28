@@ -1,22 +1,5 @@
 # react-app
-### 1. Change package.json
-###### You need to change this line with your path to webpack "webpack:w"
-```
-"scripts": {
-    ...
-    "webpack" : "node C:\\Users\\ipetrovbg\\AppData\\Roaming\\npm\\node_modules\\webpack\\bin\\webpack.js --progress --colors --watch"
-    ...
-  },
-```
-###### You don't have need from this scripts if you have already installed webpack globaly. If this is the case you just run webpack --progress --colors --watch
-```
-"scripts": {
-    ...
-    "webpack" : "webpack --progress --colors --watch"
-    ...
-  },
-```
-### 2. run
+### 1. run
 ```
     npm install -g webpack
 ```
@@ -27,6 +10,6 @@
 ### 3. create dist folder in root directory
 ### 4. run
 ```
-    npm run webpack
+    npm run serve
 ```
-### 5. open index.html in browser
+### 1. open http://localhost:3000 in browser
