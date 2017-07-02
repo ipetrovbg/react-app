@@ -1,17 +1,13 @@
 # react-app
 ### 1. run
 ```
-    npm install -g webpack
+   npm install
 ```
 ### 2. run
 ```
-    npm install
-```
-### 3. run
-```
     npm start
 ```
-### 4. open http://localhost:3000 in browser
+### 3. open http://localhost:3000 in browser
 
 ###### implementation based on this examples:
 https://www.typescriptlang.org/docs/handbook/react-&-webpack.html
