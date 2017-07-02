@@ -5,18 +5,29 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "node_modules/.bin/webpack-dev-server"
+    "start": "webpack-dev-server --content-base src --inline --hot --history-api-fallback"
   },
   "author": "ipetrovbg",
   "license": "ISC",
   "dependencies": {
     "@types/react": "^15.0.33",
     "@types/react-dom": "^15.5.1",
+    "@types/react-router": "^4.0.12",
+    "@types/react-router-dom": "^4.0.5",
+    "history": "^4.6.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "redux": "^3.7.1",
+    "redux-logger": "^3.0.1",
+    "redux-observable": "^0.14.1",
     "webpack": "^3.0.0"
   },
   "devDependencies": {
+    "@types/redux-logger": "^3.0.0",
+    "@types/react-redux": "4.4.37",
     "awesome-typescript-loader": "^3.2.1",
     "html-webpack-plugin": "^2.29.0",
     "source-map-loader": "^0.2.1",
