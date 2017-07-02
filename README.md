@@ -9,7 +9,7 @@
 ```
 ### 3. run
 ```
-    npm run serve
+    npm start
 ```
 ### 4. open http://localhost:3000 in browser
 
