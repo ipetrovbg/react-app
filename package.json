@@ -23,15 +23,19 @@
     "redux": "^3.7.1",
     "redux-logger": "^3.0.1",
     "redux-observable": "^0.14.1",
+    "rxjs": "^5.4.1",
     "webpack": "^3.0.0"
   },
   "devDependencies": {
-    "@types/redux-logger": "^3.0.0",
     "@types/react-redux": "4.4.37",
+    "@types/redux-logger": "^3.0.0",
     "awesome-typescript-loader": "^3.2.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.5.2",
     "html-webpack-plugin": "^2.29.0",
     "source-map-loader": "^0.2.1",
-    "typescript": "^2.4.1",
+    "typescript": "2.4.0",
     "webpack-dev-server": "^2.5.0"
   }
 }

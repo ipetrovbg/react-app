@@ -1,7 +1,8 @@
 import * as React from 'react';
-import {Store} from "react-redux";
-import { removeAllTodos, addTodo, AppState } from "../actions/actions";
-import {Link} from "react-router-dom";
+import { Store } from 'react-redux';
+import { addTodo, AppState, removeAllTodos } from '../actions/actions';
+import { Link} from 'react-router-dom';
+import { Observable } from 'rxjs/Observable';
 
 export interface ITodoListComponent {
     store: Store<AppState>;
@@ -59,6 +60,13 @@ export class TodoListComponent extends React.Component<ITodoListComponent> {
     handleState() {
         this.setState({ todos: this.props.store.getState().todos });
     }
+    componentWillMount() {
+        const five = Observable.of(5);
+        five.subscribe((myNumber => {
+            console.log(myNumber);
+        }))
+    }
+
     /**
      * React lifecycle
      */
@@ -72,6 +80,9 @@ export class TodoListComponent extends React.Component<ITodoListComponent> {
     }
 
     addTodo() {
+        if (!this.state.value)
+            return;
+
         this.props.store.dispatch(addTodo(this.state.value));
         this.setState({value: '' });
     }
@@ -93,7 +104,7 @@ export class TodoListComponent extends React.Component<ITodoListComponent> {
         return <div>
             <Link to="/">Home</Link>
             <input type="text" value={this.state.value} onChange={this.onChange} />&nbsp;
-            <button onClick={ this.addTodo }>Adsd Todo</button> &nbsp;| &nbsp;
+            <button onClick={ this.addTodo }>Add Todo</button> &nbsp;| &nbsp;
             <button onClick={ this.resetTodos }>Reset Todo's </button>
             <div>{ this.renderTodoList() }</div>
         </div>

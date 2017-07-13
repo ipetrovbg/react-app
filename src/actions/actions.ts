@@ -1,4 +1,5 @@
-import {actionTypes} from "./action.types";
+import { actionTypes } from './action.types';
+import { Action } from 'redux';
 
 export const AppStore: AppState = {
     counter: 0,
@@ -9,33 +10,21 @@ export interface AppState {
     todos: Array<any>
 }
 
-export interface Action {
-    type: any;
-}
-
 export interface TodoAction extends Action {
-    type: any;
     payload?: any;
 }
 
-export const removeAllTodos = () => {
-    return {
-        type: actionTypes.RESET_TODOS
-    };
-};
-
-export const addTodo: (payload: any) => TodoAction = (payload) => ({
-    type: actionTypes.ADD_TODO,
-    payload
+export const removeAllTodos = (): TodoAction => ({
+    type: actionTypes.RESET_TODOS
 });
 
-export const addCounter: (payload: any) => TodoAction = (payload) => ({
+
+export const addTodo = (payload: any): TodoAction => ({
+    type: actionTypes.ADD_TODO,
+    payload: payload
+});
+
+export const addCounter: (payload: number) => TodoAction = (payload: number) => ({
     type: actionTypes.INCREMENT,
     payload
 });
-
-export const removeTodo = () => {
-    return {
-        type: actionTypes.DECREMENT
-    };
-};
