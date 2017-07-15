@@ -45,7 +45,10 @@ export class TodoListComponent extends React.Component<any, any> {
 
     handleTodos() {
        return this.props.todos.map((todo: any, index: number) => {
-        return <p key={index} onClick={this.handleClick.bind(this, todo)}>{ todo.title }</p>
+        return <div  key={index} style={{float: 'left', width: 165, overflow: 'hidden', height: 165}}>
+            {/*<p onClick={this.handleClick.bind(this, todo)}>{ todo.title }</p>*/}
+            <img src={todo.thumbnailUrl} alt={todo.title} />
+        </div>
        });
     }
 
@@ -93,6 +96,7 @@ export class TodoListComponent extends React.Component<any, any> {
             <button onClick={this.loadAsyncTodos.bind(this)}>Load Async Todos</button>
             <button onClick={this.resetTodos.bind(this)}>Reset todos</button>
             <Link to="/" >Home</Link>
+            <hr/>
             {this.handleTodos()}
             </div>
     }

@@ -38,7 +38,7 @@ export const loadAsyncTodos = () => (dispatch) => {
     if (CachedTodos.todos.length) {
         dispatch(loadTodos(CachedTodos.todos));
     } else {
-        axios.get('http://jsonplaceholder.typicode.com/users/1/todos')
+        axios.get('http://jsonplaceholder.typicode.com/albums/1/photos')
             .then((response) => {
                 CachedTodos.setTodos(response.data);
                 dispatch(loadTodos(response.data));
