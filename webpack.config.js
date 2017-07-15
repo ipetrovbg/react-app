@@ -27,9 +27,23 @@ module.exports = {
     module: {
         rules: [
             // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
-            { test: /\.tsx?$/, use: ["babel-loader", "awesome-typescript-loader"], exclude: /node_modules/ },
-            // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+            {
+                test: /\.tsx?$/,
+                use: [
+                    {
+                        loader: "babel-loader",
+                        options: {
+                            plugins: ["transform-class-properties", "transform-decorators-legacy"]
+                        }
+                    },
+                    {
+                        loader: "awesome-typescript-loader"
+                    }
+                ],
+                exclude: /node_modules/
+            },
             { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
+
         ]
     }
 };

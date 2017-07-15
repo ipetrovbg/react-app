@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import "rxjs";
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import { Store, Provider } from 'react-redux';
 import {
     BrowserRouter as Router,
@@ -14,7 +14,7 @@ import { AppState } from "./actions/actions";
 import { App } from './components/App';
 import { rootReducer } from './reducers/root-reducer';
 
-let store: Store<AppState> = createStore(rootReducer);
+let store: Store<AppState> = createStore(rootReducer, applyMiddleware(thunk));
 
 ReactDOM.render(
     <Provider store={store}>
@@ -24,7 +24,7 @@ ReactDOM.render(
                     <App compiler={'TypeScript'} framework={'React'} />
                 </Route>
                 <Route exact path="/todo">
-                    <TodoListComponent store={store} />
+                    <TodoListComponent />
                 </Route>
             </Switch>
         </Router>
