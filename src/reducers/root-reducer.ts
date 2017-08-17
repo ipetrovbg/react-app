@@ -14,6 +14,9 @@ export const rootReducer = (state: AppState = AppStore, action: TodoAction) => {
         case actionTypes.RESET_TODOS:
             state.todos = [];
             return Object.assign({}, state);
+        case actionTypes.TOGGLE_MENU :
+            state.toggleMenuState = !state.toggleMenuState;
+            return Object.assign({}, state);
         case actionTypes.LOAD_TODOS:
             state.todos = action.payload;
             return Object.assign({}, state);
